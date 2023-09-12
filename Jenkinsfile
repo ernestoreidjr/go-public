@@ -5,11 +5,6 @@ pipeline {
         }
     }
     stages {
-        stage('SCM') {
-            steps {
-                git url: 'https://github.com/ernestoreidjr/go-public.git'
-            }
-        }
         stage('SonarQube') {
             steps {
                 withSonarQubeEnv(installationName: 'sq-dev') { 
